@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mafia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SETUP SCREEN -->
+    <div id="setup-screen" class="screen active">
+        <h1 class="title">MAFIA</h1>
+
+        <label>Player Names (one per line)</label>
+        <textarea id="playersInput" placeholder="Player 1&#10;Player 2&#10;Player 3"></textarea>
+
+        <h3>Roles</h3>
+        <div class="roles">
+            <label>Mafia <input type="number" id="mafiaCount" value="1" min="0"></label>
+            <label>Doctor <input type="number" id="doctorCount" value="1" min="0"></label>
+            <label>Detective <input type="number" id="detectiveCount" value="1" min="0"></label>
+            <label>Jester <input type="number" id="jesterCount" value="0" min="0"></label>
+            <label>Zombie <input type="number" id="zombieCount" value="0" min="0"></label>
+        </div>
+
+        <button onclick="startGame()">START GAME</button>
+    </div>
+
+    <!-- CARD SCREEN -->
+    <div id="card-screen" class="screen">
+        <h1 class="title">MAFIA</h1>
+
+        <div class="card" onclick="revealRole()">
+            <h2 id="playerName"></h2>
+            <p class="instruction">Do not show your role to others.</p>
+            <p id="roleText">Tap to reveal role</p>
+        </div>
+
+        <button class="next-btn" onclick="nextPlayer()">▶ NEXT PLAYER</button>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end-screen" class="screen">
+        <h1 class="title">Game started!</h1>
+        <p>Hand the phone to the game master.</p>
+
+        <button onclick="revealSpecialRoles()">Reveal Special Roles</button>
+        <button class="secondary" onclick="resetGame()">New Game</button>
+
+        <ul id="specialRolesList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+.title {
+  color: #666;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+textarea {
+  width: 90%;
+  height: 120px;
+  margin: 10px 0;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.roles label {
+  display: block;
+  margin: 6px 0;
+}
+
+.card {
+  background: #ffeb3b;
+  border-radius: 25px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  width: 85%;
+  max-width: 360px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.instruction {
+  color: #444;
+  margin: 15px 0;
+}
+
+#roleText {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.next-btn {
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 30px;
+  font-size: 16px;
+}
+
+button {
+  margin: 10px;
+}
+
+.secondary {
+  background: transparent;
+  color: #333;
+  border: none;
+  text-decoration: underline;
+}
